@@ -72,6 +72,8 @@ MRSParVolCo(GM, WM, CSF, TR, TE, ouputfolder, NAA, CRE, CHO ,GLU, INS, GABA)
 - TE
 - TR
 - outputfolder
+
+
 !!!!!!!!! metabolite vectors and tissue composition vectors needs to have the same length (e.g. nr of subjects/MRSfiles)
 
 ### MRSParVolCo_UI:  
@@ -87,6 +89,8 @@ The input can be selected via User Interfaces
 - TE
 - TR
 - outputfolder
+
+
 !!!!!!!!! number of rows in metabolite file and tissue composition value file need to be the same (e.g. nr of subjects)
 
 
