@@ -9,9 +9,12 @@ function MRSParVolCo_UI
 %       Text files can contain comma separated columns for different 
 %       amplitudes of the same metabolite (e.g. from different estimation 
 %       approaches)
-%   - all tissue composition percent vectors for GM, WM and CSF
-% !!!!!!!!! number of rows in metabolite file and tissue composition
-% !!!!!!!!! value file need to be the same (e.g. nr of subjects)
+%   - text file of tissue composition values (e.g. from MRSGetTissueComp) 
+%       with columns in the order %GM, %WM and %CSF
+% !!!!!!!!! number of rows in metabolite file and tissue composition value 
+% file need to be the same and the rows need to correspond (e.g. 
+% subjects s: metabolite value in row s as well as tissue composition value
+% is row s)
 %	- TE
 %	- TR
 %	- outputprefix

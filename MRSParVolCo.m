@@ -5,13 +5,16 @@ function MRSParVolCo(GM, WM, CSF, TR, TE, outputpath,...
 % the given tissue composition values of the voxel.
 %
 % INPUT
-% 	- vector of amplitudes of the metabolites NAA, CRE, CHO ,GLU,
-%       INS and/or GABA. Use [] for the metabolites you do not want to
-%       correct.
-%   - all tissue composition percent vectors for GM, WM and CSF
-%       (e.g. from MRSGetTissueComp)
-% !!!!!!!!! metabolite vectors and tissue composition vectors 
-% !!!!!!!!! needs to have the same length (e.g. nr of subjects/MRSfiles)
+% 	- vector (size nx1) of amplitudes of the metabolites NAA, CRE, CHO, 
+%     GLU, INS and/or GABA. Use [] for the metabolites you do not want to 
+%     correct.  For using m different amplitudes of the same metabolite 
+%     (e.g. from different estimation approaches) as input you can use a 
+%     matrix (size nxm)
+%   - all tissue composition percent vectors for GM, WM and CSF (e.g. from
+%     MRSGetTissueComp) (size nx1)
+% !!!!!!!!! metabolite vectors and tissue composition vectors needs to have
+% the same length n and the rows need to correspond (e.g. subjects s: 
+% metabolite value in row s as well as tissue composition value is row s)
 %	- TE
 %	- TR
 %	- outputprefix
