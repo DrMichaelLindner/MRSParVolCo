@@ -85,7 +85,7 @@ MRSParVolCo_UI
 #### INPUT 
 The input can be selected via User Interfaces
 - text or excel files including columns of values of the metabolites NAA, CRE, CHO ,GLU, INS and/or GABA. Text files can contain comma separated columns for different amplitudes of the same metabolite (e.g. from different estimation approaches)
-- text file of tissue composition values (e.g. from MRSGetTissueComp)
+- text file of tissue composition values (e.g. from MRSGetTissueComp) with columns in the order %GM, %WM and %CSF
 - TE
 - TR
 - outputfolder
