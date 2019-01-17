@@ -98,9 +98,11 @@ The input can be selected via User Interfaces
 Both functions produce text files as output containing input amplitudes and corrected amplitudes of each given metabolite.
 
 
+### Getting tissue composition for the input of MRSParVolCo:
+Tissue composition represents the percentage of gray and white matter and cerebrospinal fluid in the acquired single voxel MRS. For getting the tissue composition  you can use the function MRSGetTissueComp before using MRSParVolCo.
+The tissue composition is calculated based on a structural nifti files and a SIEMENS dicom or rda MRS file. (tested on MRS data from  SIEMENS single voxel PRESS and MEGA-PRESS sequences from SIEMENS TRIO and PRISMAfit)
 
-For getting the tissue composition (gray and white matter and cerebrospinal fluid) of a single MRS voxel you can use MRSGetTissueComp beforehand.
-The tissue composition is calculated based on a structural nifti files and SIEMENS dicom or rda MRS file. (tested SIEMENS PRESS and MEGA-PRESS sequences from SIEMENS TRIO and PRISMAfit)
+
 Again a scriptable as well as a UI version are available:
 
 ### MRSGetTissueComp:
