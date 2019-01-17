@@ -67,14 +67,14 @@ A scriptable version using input vectors for the metabolite amplitude values and
 MRSParVolCo(GM, WM, CSF, TR, TE, ouputfolder, NAA, CRE, CHO ,GLU, INS, GABA)
 
 #### INPUT
-- vector of amplitudes of the metabolites NAA, CRE, CHO ,GLU, INS and/or GABA. Use [] for the metabolites you do not want to correct.
-- all tissue composition percent vectors for GM, WM and CSF (e.g. from MRSGetTissueComp)
+- vector (size nx1) of amplitudes of the metabolites NAA, CRE, CHO ,GLU, INS and/or GABA. Use [] for the metabolites you do not want to correct.  For using m different amplitudes of the same metabolite (e.g. from different estimation approaches) as input you can use a matrix (size nxm)
+- all tissue composition percent vectors for GM, WM and CSF (e.g. from MRSGetTissueComp) (size nx1)
 - TE
 - TR
 - outputfolder
 
 
-!!!!!!!!! metabolite vectors and tissue composition vectors needs to have the same length (e.g. nr of subjects/MRSfiles)
+!!!!!!!!! metabolite vectors and tissue composition vectors needs to have the same length n and the rows need to correspond (e.g. subjects s: metabolite value in row s as well as tissue composition value is row s)
 
 ### MRSParVolCo_UI:  
 A version using simple input dialogues for manually selecting text files.
@@ -91,7 +91,7 @@ The input can be selected via User Interfaces
 - outputfolder
 
 
-!!!!!!!!! number of rows in metabolite file and tissue composition value file need to be the same (e.g. nr of subjects)
+!!!!!!!!! number of rows in metabolite file and tissue composition value file need to be the same and the rows need to correspond (e.g. subjects s: metabolite value in row s as well as tissue composition value is row s)
 
 
 ### OUTPUT of MRSParVolCo and MRSParVolCo_UI
