@@ -92,9 +92,9 @@ savename = [outpath, filesep, 'Mask_',MRSFile];
 save_untouch_nii(nii,savename);
 
 fprintf('\nLoad segmentation data');
-GM_nii = load_untouch_nii([t1Path GMFile]);
-WM_nii = load_untouch_nii([t1Path WMFile]);
-CSF_nii = load_untouch_nii([t1Path CSFFile]);
+GM_nii = load_untouch_nii([GMPath GMFile]);
+WM_nii = load_untouch_nii([WMPath WMFile]);
+CSF_nii = load_untouch_nii([CSFPath CSFFile]);
 
 fprintf('\nMask segmentation data');
 gm_mat = GM_nii.img .* mask;
@@ -140,7 +140,7 @@ GMfrac = gm_fra;
 WMfrac = wm_fra;
         
 
-mat_out_filename = [outpath,filesep, MRSFile(1:end-4) 'tiss_comp.mat'];
+mat_out_filename = [outpath,filesep, MRSFile(1:end-4) '_tiss_comp.mat'];
 save(mat_out_filename, 'GMper', 'WMper', 'CSFper',...
     'GMfrac', 'WMfrac' )
 
