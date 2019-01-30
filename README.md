@@ -105,13 +105,13 @@ The tissue composition is calculated based on a structural nifti files and a SIE
 
 Again a scriptable as well as a UI version are available:
 
-### MRSGetTissueComp:
+#### MRSGetTissueComp:
 A scriptable version for looping over multiple subjects and MRS files.
 
-#### USAGE
+##### USAGE
 MRSGetTissueComp(batch)
 
-#### INPUT
+##### INPUT
 Matlab structure of the following format:
 - batch(x).t1file = filename with path of nifti file of structrual scan after brain extraction (bet)
 - batch(x).GMfile = filename with path of nifti file of grey matter mask of segmentation
@@ -122,13 +122,13 @@ Matlab structure of the following format:
 MRSGetTissueComp can loop over multiple subjects (x) and multiple MRS files per subject (y).
 
 
-### MRSGetTissueComp_UI:
+#### MRSGetTissueComp_UI:
 A version using simple input dialogues for a single file.
 
-#### USAGE
+##### USAGE
 MRSGetTissueComp_UI
 
-#### INPUT
+##### INPUT
 The input can be selected via User Interfaces
 - nifti file of structrual scan after brain extraction (bet)
 - nifti file of grey matter mask of segmentation
@@ -138,7 +138,7 @@ The input can be selected via User Interfaces
 - output folder
 
 
-### OUTPUT of MRSGetTissueComp and MRSGetTissueComp_UI
+#### OUTPUT of MRSGetTissueComp and MRSGetTissueComp_UI
 Both functions produce the following outputs:
 
 - A Mask of the MRS single voxel 
@@ -157,13 +157,13 @@ Both functions produce the following outputs:
   - WMfrac: fraction of white matter 
 
   
-### MRSGetTissueCompFromMask_UI:
+#### MRSGetTissueCompFromMask_UI:
 A version using simple input dialogues for a single file to extract tissue composition values from a binary MRS voxel mask instead of the MRS data and the T1.
 
-#### USAGE
+##### USAGE
 MRSGetTissueCompFromMask_UI
 
-#### INPUT
+##### INPUT
 The input can be selected via User Interfaces
 - nifti file of binary MRS voxel mask
 - nifti file of grey matter mask of segmentation
@@ -171,7 +171,7 @@ The input can be selected via User Interfaces
 - nifti file of CSF mask of segmentation
 - output folder
 
-###OUTPUT of MRSGetTissueCompFromMask_UI
+##### OUTPUT of MRSGetTissueCompFromMask_UI
 
 - Text file containing the values:
   - GM_per: percentage of gray matter in the MRS voxel
