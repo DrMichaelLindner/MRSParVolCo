@@ -155,6 +155,37 @@ Both functions produce the following outputs:
   - CSFper: percentage of cerebrospinal fluid 
   - GMfrac: fraction of grey matter
   - WMfrac: fraction of white matter 
+
+  
+### MRSGetTissueCompFromMask_UI:
+A version using simple input dialogues for a single file to extract tissue composition values from a binary MRS voxel mask instead of the MRS data and the T1.
+
+#### USAGE
+MRSGetTissueCompFromMask_UI
+
+#### INPUT
+The input can be selected via User Interfaces
+- nifti file of binary MRS voxel mask
+- nifti file of grey matter mask of segmentation
+- nifti file of white matter mask of segmentation
+- nifti file of CSF mask of segmentation
+- output folder
+
+###OUTPUT of MRSGetTissueCompFromMask_UI
+
+- Text file containing the values:
+  - GM_per: percentage of gray matter in the MRS voxel
+  - WM_per: percentage of white matter in the MRS voxel
+  - CSF_per: percentage of CSF in the MRS voxel
+  - GM_frac: Fraction of gray matter in the tissue of the MRS voxel
+  - WM_frac: Fraction of white matter in the tissue of the MRS voxel
+- Matlab file containing the following vectors (They can be uses as input for MRSParVolCo_2_correct):
+  - GMper: percentage of gray matter 
+  - WMper: percentage of white matter
+  - CSFper: percentage of cerebrospinal fluid 
+  - GMfrac: fraction of grey matter
+  - WMfrac: fraction of white matter 
+
   
 
 ## *Licence*  
